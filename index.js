@@ -33,14 +33,22 @@ function handleEvent(event) {
   if (event.type !== 'message' || event.message.type !== 'text') {
     // ignore non-text-message event
     return Promise.resolve(null);
-  }else if (event.message.type === "text" &&  (event.message.text === "hello" || event.message.text === "Hello"  ) ){
+  }
+  else if (event.message.type === "text" &&  (event.message.text === "hello" || event.message.text === "Hello"  ) ){
     const payload = {
       type: "text",
       text: "Hello Tester. I'am Created by Pichanita."
     };
     return client.replyMessage(event.replyToken, payload);
-}
   }
+  else if (event.message.type === "text" &&  event.message.text === "สวัสดี"  ){
+    const payload = {
+      type: "text",
+      text: "สวัสดีค่ะ"
+    };
+    return client.replyMessage(event.replyToken, payload);
+  }
+}
 
  
 
