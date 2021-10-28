@@ -37,14 +37,14 @@ function handleEvent(event) {
   else if (event.message.type === "text" &&  (event.message.text === "hello" || event.message.text === "Hello"  ) ){
     const payload = {
       type: "text",
-      text: "Hello Tester. I'am Created by Pichanita."
+      text: "การศึกษา MASSAGING API โดยกลุ่มพัฒนาระบบงานจัดเก็บข้อมูล ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร"
     };
     return client.replyMessage(event.replyToken, payload);
   }
   else if (event.message.type === "text" &&  event.message.text === "สวัสดี"  ){
     const payload = {
       type: "text",
-      text: "สวัสดีค่ะ"
+      text: "การศึกษา MASSAGING API โดยกลุ่มพัฒนาระบบงานจัดเก็บข้อมูล ศูนย์เทคโนโลยีสารสนเทศและการสื่อสาร"
     };
     return client.replyMessage(event.replyToken, payload);
   }
